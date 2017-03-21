@@ -72,15 +72,6 @@ def link_crawler(seed_url, link_regex):
                     crawl_queue.append(link)
 
 
-
-
-
-
-
-
-
-
-
 #print download('http://httpstat.us/500')
 #print( download('http://meetup.com') )
 #crawl_sitemap('http://example.webscraping.com/sitemap.xml')
@@ -88,17 +79,6 @@ def link_crawler(seed_url, link_regex):
 
 print( download('http://www.baidu.com/robots.txt') )
 crawl_sitemap('http://www.baidu.com/sitemap.xml')
-
-
-
-
-
-
-
-
-
-
-
 
 
 
