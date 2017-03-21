@@ -73,7 +73,6 @@ def crawl_sitemap(url):
     """
     sitemap = download(url)
     links = re.findall('<loc>(.*?)</loc>', sitemap)
-    
     for link in links:
         print( 'observed url : ', link )
         #html = download(link)
