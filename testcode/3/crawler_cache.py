@@ -72,4 +72,4 @@ def link_crawler(seed_url, link_regex, delay=0.5, max_depth=2, scrape_callback=N
                         
                         
 crawl_results = link_crawler('http://example.webscraping.com', '/(index|view)', 
-             scrape_callback=ScrapeCallback(), max_depth=5)
+             scrape_callback=ScrapeCallback(), max_depth=100)
