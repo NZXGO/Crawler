@@ -7,8 +7,11 @@ Created on Thu Mar 23 19:54:23 2017
 
 import DownLoader
 import DiskCache
+import MongoCache
 import csv
 import lxml.html
+import re
+import urlparse
 
 class ScrapeCallback:
     """
@@ -47,7 +50,8 @@ def link_crawler(seed_url, link_regex, delay=0.5, max_depth=2, scrape_callback=N
     crawl_queue = [seed_url]
     #用字典的方式记录已访问链接的深度
     seen_link = { seed_url:0 }
-    cache = DiskCache.DiskCache(cache_dir=cache_dir)
+    #cache = DiskCache.DiskCache(cache_dir=cache_dir)
+    cache = MongoCache.MongoCache()
     D = DownLoader.DownLoader(delay=delay, cache=cache)
     
     while crawl_queue:
